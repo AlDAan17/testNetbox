@@ -1,0 +1,111 @@
+@font-face {
+    font-family: Open Sans;
+    src: url('./fonts/OpenSans-Regular.ttf');
+}
+
+body {
+    font-family: Open Sans, serif;
+    color: #fff;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 72%;
+    margin: 0 auto;
+}
+
+.block {
+    position: relative;
+    padding: 100px 60px 0;
+    margin: auto;
+    border: 5px solid #FFC096;
+    border-radius: 120px;
+    background: linear-gradient(43.72deg, #000000 -15.77%, #363636 91.4%);
+    font-size: 32px;
+    line-height: 165%;
+}
+
+.block::after {
+    content: "";
+    position: absolute;
+    width: 70%;
+    height: 65px;
+    border:5px solid #FFC096 ;
+    border-top: 5px solid #fff;
+    background: #fff;
+    top: -6px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 0 0 70px 70px;
+}
+
+.block__text {
+    height: 695px;
+    overflow-y: scroll;
+}
+
+.block__text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.block__text::-webkit-scrollbar-thumb {
+    z-index: 4;
+    background-clip: padding-box;
+    background-color: #fff;
+}
+
+.block__text::-webkit-scrollbar-track {
+    background-color: #484848;
+    margin-bottom: 80px;
+}
+
+@media (max-width: 1440px) {
+    .block{
+        font-size: 24px;
+    }
+    .block__text {
+    height: 526px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .block::after{
+        width: 60%;
+    }
+}
+
+@media (max-width: 840px) {
+    .block::after{
+        width: 45%;
+    }
+}
+
+@media (max-width: 589px) {
+
+    .block{
+        border-radius: 70px;
+        font-size: 19px;
+        padding: 70px 40px 0 50px;
+    }
+
+    .block::after{
+        display: none;
+    }
+
+    .block__text {
+        height: 722px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .block{
+        font-size: 12px;
+        padding: 50px 20px 0 35px;
+    }
+}
